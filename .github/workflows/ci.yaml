@@ -14,7 +14,7 @@ jobs:
       sha: ${{ steps.output-sha.outputs.sha }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Outputs the value
         id: output-sha
         run: |
@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Setup JDK
         uses: actions/setup-java@v4
         with:
@@ -57,7 +57,7 @@ jobs:
       contents: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Create and push a tag
         id: tag-name
         run: |
